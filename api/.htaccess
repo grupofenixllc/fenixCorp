@@ -1,0 +1,22 @@
+# Desactiva el listado de directorios y bloquea el acceso a archivos ocultos como .env
+Options -Indexes
+<FilesMatch "^\.">
+    Require all denied
+</FilesMatch>
+<Files ".env">
+    Require all denied
+</Files>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Pasar el header Authorization a PHP
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+
+    # No reescribir si es un fichero o carpeta real
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+
+    # Enviar todo lo demás a index.php
+    RewriteRule ^ index.php [L]
+</IfModule>
