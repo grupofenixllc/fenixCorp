@@ -14,6 +14,7 @@ return [
 
     // ESTA ES LA LÍNEA QUE HEMOS CAMBIADO
     'allowed_origins' => ['http://localhost:5173'],
+    //para producción: 'allowed_origins' => ['https://fenixcorp.com.ar', 'https://www.fenixcorp.com.ar'],
 
     'allowed_origins_patterns' => [],
 
