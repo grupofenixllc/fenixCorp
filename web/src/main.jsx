@@ -9,6 +9,7 @@ import App from './App.jsx'; // Sigue siendo nuestra página de Login
 import Layout from './Layout.jsx'; // Nuestro nuevo layout principal
 import Dashboard from './pages/Dashboard.jsx'; // La página de inicio del panel
 import ProductsPage from './pages/ProductsPage.jsx'; // La nueva página de productos
+import ProvidersPage from './pages/ProvidersPage.jsx'; // La nueva página de proveedores
 
 import './index.css';
 
@@ -28,6 +29,9 @@ const router = createBrowserRouter([
       {
         path: 'products', // se accede con /panel/products
         element: <ProductsPage />,
+      },
+      { path: 'providers', // se accede con /panel/providers
+        element: <ProvidersPage /> 
       },
     ],
   },

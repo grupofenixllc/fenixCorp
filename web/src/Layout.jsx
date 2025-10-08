@@ -23,7 +23,7 @@ function Layout() {
     { name: 'Dashboard', href: '/panel/dashboard', icon: Home },
     { name: 'Productos', href: '/panel/products', icon: Package },
     { name: 'Ventas', href: '#', icon: ShoppingCart },
-    { name: 'Proveedores', href: '#', icon: Truck },
+    { name: 'Proveedores', href: '/panel/providers', icon: Truck },
     { name: 'Usuarios', href: '#', icon: Users },
   ];
 
